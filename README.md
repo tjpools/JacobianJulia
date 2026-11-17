@@ -39,6 +39,21 @@ rows and input variables as columns. Blue indicates negative derivatives, red
 indicates positive derivatives, and white marks zero on a symmetric color scale.
 It can run from a shell without a graphical display.
 
+The script also saves `jacobian_orientation.gif`, comparing a square of side
+length 0.2 centered at `[1, 2]`, its Jacobian approximation, and its nonlinear
+image. Arrows and matching corner colors show the boundary changing from
+counterclockwise to clockwise because the Jacobian determinant is approximately
+-1.3054. The linear map scales area by approximately 1.3054.
+
+The panels display offsets from the input center and the output center `f([1, 2])`,
+so translation does not obscure the shape change. Dashed outlines mark the
+original square. Intermediate frames interpolate between the input offsets and
+the transformed offsets; they are an illustration, not repeated applications of
+the function or a physical evolution. The Jacobian image is a parallelogram,
+whereas the nonlinear image has slightly curved edges.
+
+![Animated local orientation reversal](jacobian_orientation.gif)
+
 ---
 
 For more information about Julia, visit [julialang.org](https://julialang.org/).
